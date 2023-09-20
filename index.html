@@ -4,116 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="css\main.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Unna&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav> 
-        <ul>
-            <li> Kelvin's Portfolio </li>
-            <li><a href = "https://github.com/KelvinVillago">GitHub </a> </li>
-            <li><a href = "http://www.google.com">Google </a> </li>
-        </ul>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Kelvin's Portfolio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Kelvin's Portfolio</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a href = "https://github.com/KelvinVillago">GitHub </a> 
+                </li>
+                <li class="nav-item">
+                    <a href = "https://github.com/KelvinVillago"> LinkedIn </a> 
+                </li>
+                <li class="nav-item">
+                    <a href = "https://ygo-deck-app.onrender.com"> Yu-Gi-Oh Deck Editor App </a>
+                </li>
+                <li class="nav-item">
+                    <a href="mailto:kelvinvillago@gmail.com"> Email Me</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
     </nav>
-    <div class = "hero-image"> 
-        <div class = "hero-text"> 
-            <h1 style = "font-size:50px"> Kelvin Villago </h1>
-            <p> Student</p>
-        </div>
-        
+
+    <div class = "row"> 
+        <p class = "title"> Kelvin Villago </p>
     </div>
-    <main> 
-        <div id="main"> 
-            <article class="main-article">
-                <h1> Background </h1>
-                <strong> <small> 4th year student at Cal Poly SLO. Major is Electrical Engineering.</small> </strong>
-                <p> 
-                    &emsp; I have always liked learning about math and science, and engineering fit my interests. I mainly like to work with physical components and products, and electrical engineering 
-                    helped me to learn about electrical components and how to use them to build amazing things. I am part of the robotics club at my school and my group makes toaster-sized robots 
-                    for competitions against other colleges. Each year we design two robots and manufacture them in our school's machine shop. I mainly work on the software side dealing with human 
-                    and autonomous controls for driving and all other functions of the robot. We use a game console style controller, one per robot. My team has actually been able to qualify for a 
-                    world competition spot and the competition is held in Texas. However, due to some internal issues with the school, we have not been able to attend.
-                    <br>
-                    &emsp; I want to learn coding as I think it will help me in my career and just be generally useful in the future. Coding is a very large part of today's society and I want to learn it
-                    so I have the skills and knowledge to apply myself in the field. I also want more things to put on my resume to help me get a job out of college and the projects through this
-                    bootcamp will help me in that regard as well. I think it would be god for me to learn both ends of a computer system, from the hardware in school to the software here. I would
-                    also like to gain more experience in coding to boost my confidence in my skills and help me in the future. 
-                </p>
-            </article>
+    
+    <div class="row main-body"> 
+        <div class="col-lg-8 col-sm-12"> 
+            <div class="row">
+                <div class="card border-dark mb-3">
+                    <div class="card-header">4th year student at Cal Poly SLO. Major is Electrical Engineering.</div>
+                    <div class="card-body text-dark">
+                        <p class="card-text">
+                            &emsp; I have always liked learning about math and science, and engineering fit my interests. I mainly like to work with physical components and products, and electrical engineering 
+                            helped me to learn about electrical components and how to use them to build amazing things. I am part of the robotics club at my school and my group makes toaster-sized robots 
+                            for competitions against other colleges. Each year we design two robots and manufacture them in our school's machine shop. I mainly work on the software side dealing with human 
+                            and autonomous controls for driving and all other functions of the robot. We use a game console style controller, one per robot. My team has actually been able to qualify for a 
+                            world competition spot and the competition is held in Texas. However, due to some internal issues with the school, we have not been able to attend.
+                        </p>
+                    </div>
+                </div>
 
-            <article class="main-article" id="article2">
-                <h1> Recent Project </h1>
-                <strong> <small> Electonic Synthetical Keyboard </small> </strong>
-                <figure>
-                    <img id="project-image" src = "images\Project.png">
-                    <figcaption> Final product at the end of class </figcaption>
-                </figure>
-                <p> &emsp; For a recent class, two other friends and I made our own simple synthetic keyboard. We used a microcontroller board called a NUCLEO and other components that were part of our lab kit. 
-                    Additionally, we bought a pair of small speakers from Amazon. The components for the project included a LCD screen, a digital to analog converter, an amplifier, and push buttons. 
-                    I mainly worked on the hardware portion of the project with wiring and making an enclosure so our project looked good and did not fall apart. There are 17 keys in total, which 
-                    equates to around an octave and a half of keys. We used mainly a version of C for the code with an IDE called STM32. There were some improvements we could have made, but ran out 
-                    of time to complete those extra tasks. 
-                </p>
-            </article>
+                <div class="card border-dark mb-3">
+                    <div class="card-header">Recent Projects</div>
+                    <div class="card-body text-dark">
+                        <div class="row">
+                            <div class="col-3">
+                                <img id="project-image" class="form-control w-100 p-0" src = ".\Images\Project.png">
+                            </div>
+                            <div class="col-9">
+                                <p class="card-text">
+                                    &emsp; For a recent class, two other friends and I made our own simple synthetic keyboard. We used a microcontroller board called a NUCLEO and other components that were part of our lab kit. 
+                                    Additionally, we bought a pair of small speakers from Amazon. The components for the project included a LCD screen, a digital to analog converter, an amplifier, and push buttons. 
+                                    I mainly worked on the hardware portion of the project with wiring and making an enclosure so our project looked good and did not fall apart. There are 17 keys in total, which 
+                                    equates to around an octave and a half of keys. We used mainly a version of C for the code with an IDE called STM32. There were some improvements we could have made, but ran out 
+                                    of time to complete those extra tasks. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <article class="main-article">
-                <h1> Hobbies </h1>
-                <strong> <small> Some things I like to do </small> </strong>
-                <p> 
-                    &emsp; I like to build models in my spare time, usually plastic fisgures and robots. I started building around 2016 and kept up with it until now. I like it because at the end, I have 
-                    something physical that I can either display or mess with. I really like working with physical objects, and building models helps me to keep my hands moving and creating something
-                    that I can show off in the end.
-                    <br>
-                    &emsp; Recently, I started learning how to 3D print using a FDM printer. The printer uses plastic wire and melts the plastic to create layers. A 3D model can be broken up into layers
-                    and the printer can take the layers of the model and build it using the melted plastic. I usually just download things off the internet but I began looking into creating some 3D 
-                    models on my own using CAD, or computer aided design. The program itself allows the user to draw something on a plane and then extrude it to make a 3D model. By using a combination
-                    of this and some other tools, I can make models that I designed and then print them to see them in a physical reality. 
-                    <br>
-                    &emsp; I started going to the archery club at my school and went to shoots at the local shooting range in town. I wanted to try some kind of physical activity to give me 
-                    a break from school. Archery intertested me and it is not very expensive to do if renting there. I'm still a beginner and just do it casually with some friends. 
-                </p>
-            </article>
+                <div class="card border-dark mb-3">
+                    <div class="card-header">Hobbies</div>
+                    <div class="card-body text-dark">
+                        <p class="card-text">
+                            &emsp; I like to build models in my spare time, usually plastic fisgures and robots. I started building around 2016 and kept up with it until now. I like it because at the end, I have 
+                            something physical that I can either display or mess with. I really like working with physical objects, and building models helps me to keep my hands moving and creating something
+                            that I can show off in the end.
+                            <br>
+                            &emsp; Recently, I started learning how to 3D print using a FDM printer. The printer uses plastic wire and melts the plastic to create layers. A 3D model can be broken up into layers
+                            and the printer can take the layers of the model and build it using the melted plastic. I usually just download things off the internet but I began looking into creating some 3D 
+                            models on my own using CAD, or computer aided design. The program itself allows the user to draw something on a plane and then extrude it to make a 3D model. By using a combination
+                            of this and some other tools, I can make models that I designed and then print them to see them in a physical reality. 
+                            <br>
+                            &emsp; I started going to the archery club at my school and went to shoots at the local shooting range in town. I wanted to try some kind of physical activity to give me 
+                            a break from school. Archery intertested me and it is not very expensive to do if renting there. I'm still a beginner and just do it casually with some friends. 
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="side"> 
-            <article class="side-article" id="profile"> 
-                <figure>
-                    <img id="profile-image" src = "images\IMG_0187.jpg">
-                    <div id="profile-details"> 
-                        <br>
-                        <h2> Kelvin Villago </h2>
+
+        <div class="col-lg-4 col-sm-12"> 
+            <div class="card-deck">
+                <div class="card">
+                  <img id="card-img-image" src = "images\IMG_0187.jpg">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Kelvin Villago</h5>
                         <ul> 
                             <li> 1108 Yosemite Dr.</li>
                             <li> Los Angeles, CA </li>
                             <li> (213)-820-2842</li>
-                            <li><a href="mailto:kelvinvillago@gmail.com"> kelvinvillago@gmail.com</a> </li>
                         </ul>
                     </div>
-                </figure>
-            </article>
-
-            <article class="side-article"> 
-                <h1> Contact</h1>
-                <strong> <small> Please contact me with questions </small></strong>
-                <form action="mailto:kelvinvillago@gmail.com" method="POST"></form>
-                    <label for="name"><strong> Name </strong> </label> 
-                    <br>
-                    <input type="text" id="name" placeholder = "Your name">
-                    <br>
-                    <label for="body"><strong> Message</strong> </label>
-                    <br>
-                    <textarea is="body" placeholder="Your message"> </textarea>
-                    <div>
-                        <button type="submit">Send Message</button>
-                    </div>
-            </article>
+                </div>
+            </div>
         </div>
-    </main>
-    <footer> 
-        <div> 
-            &copy Kelvin Villago 2021
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
