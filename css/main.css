@@ -30,14 +30,33 @@ nav a:hover{
 
 body{
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bg.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/bg.JPG");
     background-repeat: no-repeat;
     background-size: cover;
+    
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
 
 .card{
     padding: 3%;
-    background-color: rgba(172, 251, 241, 0.7);
-    box-shadow: 5px 5px 10px 5px rgb(37, 37, 37);
+    background-color: rgba(51, 51, 51, 0.9);
+    box-shadow: 5px 5px 10px 5px rgba(172, 251, 241, 0.2);
+    color: rgb(203, 203, 203);
+}
+
+.card-body, .card-text{
+    color: rgb(203, 203, 203);
 
 }
