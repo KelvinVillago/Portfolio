@@ -44,7 +44,7 @@ html{
 }
 
 .hero-image{
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("..\images\IMG_1274.jpg");
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../Images/IMG_1274.JPG");
     padding: 100px;
     margin-top: 30px;
     background-repeat: no-repeat;
