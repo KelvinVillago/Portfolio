@@ -57,16 +57,24 @@
                             <div class="row">
                                 <div class="col-9">
                                     <p> 
-                                        For a recent class, two other friends and I made our own simple synthetic keyboard. We used a microcontroller board called a NUCLEO and other components that were part of our lab kit. 
-                                        Additionally, we bought a pair of small speakers from Amazon. The components for the project included a LCD screen, a digital to analog converter, an amplifier, and push buttons. 
-                                        I mainly worked on the hardware portion of the project with wiring and making an enclosure so our project looked good and did not fall apart. There are 17 keys in total, which 
-                                        equates to around an octave and a half of keys. We used mainly a version of C for the code with an IDE called STM32. There were some improvements we could have made, but ran out 
-                                        of time to complete those extra tasks. 
+                                        A parter and I were able to implement a vision based pick and place algorithm for a robot arm. The robot arm is a 4 degree of freedom arm (meaning it has 4 joints)
+                                        and was able to be controlled with Python code. The camera used was the Intel Realsense camera, which also had a Python library. The camera would scan for circles
+                                        continuously and use HSV (hue, saturation, value) to classify the spheres into their respective colors. The robot moved with trajectory generation, meaning a path 
+                                        was created from its initial point to intermediate points. The robot would move from a home position to a position above the ball, the pick it up. From the ball's 
+                                        location, the robot would move to a preassigned bin depending on the color of the ball. This process involved solving for and implementing forward, inverse, and 
+                                        velocity kinematics to provide control over the joints and how they moved. The camera implementation covered using Hough transforms to detect circles in an image 
+                                        and detecting if the circle's center was inside of the workspace. The camera also used a PNP algorithm to convert what it saw into the robot's frame of reference. 
+                                        <br>
+                                        <br>
+                                        We were also able to develop visual servoding for this robot arm using PID controls. The PID controller stands for position, integral, and derivative and uses the 
+                                        error between the current position and the target position to determine how fast the robot would move. The implementation for this involved using AprilTags to create 
+                                        a point cloud localization for the robot to determine the AprilTag position in the robot frame of reference. This point cloud method would also serve to initialize 
+                                        the robot for the pick and place algorithm. An AprilTag was detected as the target position for the robot to move to, and was able to follow the AprilTag as long as 
+                                        it stayed within the robot's physical range. 
                                     </p>
                                 </div>
                                 <div class="col-3">
-                                    <img id="project-image" src = "Images/Project.png" class="img-fluid">
-                                    <figcaption> Final product at the end of class </figcaption>
+                                    <iframe src="https://drive.google.com/file/d/1QmuDms_3levN9Fpe7lQJ4VmAMNsFHgG1/preview" allow="autoplay"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -74,16 +82,19 @@
                         <div class="card">
                             <div class="row">
                                 <div class="col-3">
-                                    <img id="project-image" src = "Images/Project.png" class="img-fluid">
-                                    <figcaption> Final product at the end of class </figcaption>
+                                    <iframe src="https://drive.google.com/file/d/11fqcPWwMK14MCfFevlqbUjQs1gA63I88/preview" allow="autoplay"></iframe>
                                 </div>
                                 <div class="col-9">
                                     <p> 
-                                        For a recent class, two other friends and I made our own simple synthetic keyboard. We used a microcontroller board called a NUCLEO and other components that were part of our lab kit. 
-                                        Additionally, we bought a pair of small speakers from Amazon. The components for the project included a LCD screen, a digital to analog converter, an amplifier, and push buttons. 
-                                        I mainly worked on the hardware portion of the project with wiring and making an enclosure so our project looked good and did not fall apart. There are 17 keys in total, which 
-                                        equates to around an octave and a half of keys. We used mainly a version of C for the code with an IDE called STM32. There were some improvements we could have made, but ran out 
-                                        of time to complete those extra tasks. 
+                                        Another project I was involved in was for my mobile robotics class. I was working with a partner to code autonomous routines for a small two wheeled robot in C.
+                                        The goal of some algorithms was to follow a black line on a white background. The first of these algorithms was PID control with the error being the difference 
+                                        between two light sensors. The robot would always be moving forward and if one of the sensors detected the black line, it would move in the direction away from 
+                                        the line. The second algorithm was a neural network implementation mimicking the PID control. The network used was a 5 node neural network with 3 hidden nodes 
+                                        and 2 outer nodes. The outer nodes would be used to directly control the motors of the robot. To train the network, the PID controller outputs were used. 
+                                        <br><br>
+                                        The other algorithm we developed was a way for the robot to find its location on a circle using Monte Carlo localization. We attached a range sensor to the side 
+                                        of the robot and set up wooden blocks in positions around the circle. We also attached an encoder to the wheel of the robot. The robot would internally create 
+                                        points around the circle and continuously move around the circle. As it moves, the points would be weighted according to the sensor readings. 
                                     </p>
                                 </div>
                             </div>
@@ -93,7 +104,7 @@
                             <div class="row">
                                 <div class="col-9">
                                     <p> 
-                                        For a recent class, two other friends and I made our own simple synthetic keyboard. We used a microcontroller board called a NUCLEO and other components that were part of our lab kit. 
+                                        For a class, two other friends and I made our own simple synthetic keyboard. We used a microcontroller board called a NUCLEO and other components that were part of our lab kit. 
                                         Additionally, we bought a pair of small speakers from Amazon. The components for the project included a LCD screen, a digital to analog converter, an amplifier, and push buttons. 
                                         I mainly worked on the hardware portion of the project with wiring and making an enclosure so our project looked good and did not fall apart. There are 17 keys in total, which 
                                         equates to around an octave and a half of keys. We used mainly a version of C for the code with an IDE called STM32. There were some improvements we could have made, but ran out 
@@ -103,6 +114,24 @@
                                 <div class="col-3">
                                     <img id="project-image" src = "Images/Project.png" class="img-fluid">
                                     <figcaption> Final product at the end of class </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img id="project-image" src = "Images/DeckApp.png" class="img-fluid">
+                                    <figcaption> Sample picture from deck creation </figcaption>
+                                </div>
+                                <div class="col-9">
+                                    <p> 
+                                        I made a website project using React and Flask. The app is a website to create an online deck for the card game Yu-Gi-Oh. 
+                                        A logged in user is allowed to create and edit a deck. For editing a deck, the user needs to search a specific card name 
+                                        and it will be added to the deck. The deck display will show a picture of all cards in the main, extra, and side decks. 
+                                        Any user logged in or not is able to view all decks on the app and download the ydk file if needed. The ydk file allows for 
+                                        integration with online games, allowing the The Flask database is used to store user and deck information. 
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +142,6 @@
                     <div class="col">
                         <h1> Hobbies </h1>
                         <div class="card">
-                            <strong> <small> Blended Masters student at Cal Poly SLO majoring in Electrical Engineering.</small> </strong>
                             <p> 
                                 I like to build models in my spare time, usually plastic fisgures and robots. I started building around 2016 and kept up with it until now. I like it because at the end, I have 
                                 something physical that I can either display or mess with. I really like working with physical objects, and building models helps me to keep my hands moving and creating something
@@ -139,7 +167,7 @@
             <div class="row">
                 <div class="col-3 side-article-left" id="profile"> 
                     <figure>
-                        <img id="profile-image" src = "Images\IMG_0187.jpg">
+                        <img id="profile-image" src = "Images\IMG_2133.jpg">
                         <div id="profile-details"> 
                             <br>
                             <h2> Kelvin Villago </h2>
